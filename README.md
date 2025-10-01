@@ -1,1 +1,15 @@
-📦 Cadastro de Produtos (MVVM - Jetpack Compose)Nome Completo: Gabriel Kremer de Sousa🎯 Objetivo da AtividadeImplementação de um aplicativo simples de gerenciamento de produtos (Cadastro, Listagem e Remoção), utilizando o padrão de arquitetura MVVM (Model-View-ViewModel) com Kotlin e Jetpack Compose. O estado da aplicação é mantido estritamente em memória no ViewModel.⚙️ Arquitetura e TecnologiaComponenteDetalheStack PrincipalKotlin, Jetpack ComposeArquiteturaMVVM (Model-View-ViewModel)Gerenciamento de EstadoViewModel utilizando mutableStateOf (sem uso de LiveData/StateFlow/Room/Rede)Modeldata class Produto(id, nome, preco, categoria)Estrutura MVVMView (UI): Composables observam o estado (vm.listaProdutos) e disparam ações de modificação (ex: vm.adicionarProduto).ViewModel: Mantém o estado da lista em mutableStateOf e implementa as lógicas de negócio (geração de ID, adição, deleção).Model: Define a estrutura de dados (Produto).✅ Requisitos ImplementadosCadastro: Formulário para Nome, Preço (numérico/decimal) e Categoria.Validação: Botão "Adicionar Produto" é desabilitado (enabled=false) se Nome/Categoria estiverem vazios ou Preço for .Listagem: Uso de LazyColumn para exibir os produtos cadastrados.Remoção: Botão "Deletar" em cada item da lista.Limpeza de Formulário: Campos limpos e foco removido após o sucesso do cadastro.🧪 Como Testar o AplicativoPara testar as funcionalidades da aplicação:Preenchimento: Preencha os campos Nome do Produto e Categoria com qualquer texto, e insira um Preço válido (numérico maior que zero).Adição: Toque no botão "Adicionar Produto". O produto deve aparecer instantaneamente na lista abaixo.Exclusão: Utilize o botão "Deletar" ao lado de qualquer item na lista para removê-lo.
+# Cadastro de Produtos - MVVM
+
+**Aluno:** Gabriel Kremer de Sousa
+
+**Descrição:**  
+App simples para cadastro, listagem e remoção de produtos usando Kotlin + Jetpack Compose + ViewModel.  
+Arquitetura MVVM com estado mantido no ViewModel via `mutableStateOf`.  
+Validação dos campos, limpeza do formulário e atualização da lista em tempo real.
+
+**Como testar:**  
+Preencha os campos Nome, Preço e Categoria. O botão "Adicionar Produto" habilita somente quando todos os campos estão válidos.  
+Clique em "Adicionar Produto" para cadastrar.  
+Os produtos aparecem na lista abaixo, com botão "Deletar" para remover cada um.  
+
+Prazo: conforme solicitado.
